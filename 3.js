@@ -11,4 +11,8 @@
 (function() {
     'use strict';
 
+     document.onclick = function() {
+window.open("eudic://dict/word");//,"_blank"
+};   
+    
 })();
