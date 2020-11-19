@@ -88,10 +88,11 @@ function textAtPosition(event) {
     // console.log('wordFirstPart--------------',wordFirstPart);
     // console.log('word--------------', word);
     
-    // alert(word);
+    alert(word);
 
 
-    window.open(`eudic://peek/${word}`);
+//     window.open(`eudic://peek/${word}`);
+    window.location.href=`eudic://peek/${word}`;
     
     range.detach();//放到最后执行不浪费前面的时间，Releases the Range from use to improve performance.
 
