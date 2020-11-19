@@ -55,12 +55,12 @@ document.addEventListener("keydown", function(event) {//用keydown也可以防�
 
 function textAtPosition(event) {
     // console.log('event.clientX, event.clientY--------------',event.clientX, event.clientY);
-    range = document.caretRangeFromPoint(event.clientX, event.clientY);
+    var range = document.caretRangeFromPoint(event.clientX, event.clientY);
     // console.log('range--------------', range);
-    caretPos = range.startOffset; //光标在char上面的时候返回当前字符左侧的位置，在段落开头及其起始字母上的时候返回0
-    rangeStartNode = range.startContainer;//因为是点译，所以startContainer和endContainer重合
+    var caretPos = range.startOffset; //光标在char上面的时候返回当前字符左侧的位置，在段落开头及其起始字母上的时候返回0
+    var rangeStartNode = range.startContainer;//因为是点译，所以startContainer和endContainer重合
     // console.log('rangeStartNode related Node--------------',rangeStartNode.previousSibling,rangeStartNode.nextSibling);//,rangeStartNode,
-    paragraph = rangeStartNode.textContent;
+    var paragraph = rangeStartNode.textContent;
 
     // console.log('paragraph--------------', paragraph);
     // console.log('caretPos--------------',caretPos,paragraph.substring(caretPos));
@@ -82,9 +82,9 @@ function textAtPosition(event) {
     // }
     // word=paragraph.substring(wordBeginPos, wordEndPos)
 
-    wordFirstPart=paragraph.substring(0,caretPos).match(wordFirstPartPtn)[0];
-    wordLastPart=paragraph.substring(caretPos).match(englishWordPtn)[0];
-    word=wordFirstPart+wordLastPart;
+    var wordFirstPart=paragraph.substring(0,caretPos).match(wordFirstPartPtn)[0];
+    var wordLastPart=paragraph.substring(caretPos).match(englishWordPtn)[0];
+    var word=wordFirstPart+wordLastPart;
     // console.log('wordFirstPart--------------',wordFirstPart);
     // console.log('word--------------', word);
     
