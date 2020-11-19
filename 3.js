@@ -63,7 +63,7 @@ function textAtPosition(event) {
     // console.log('rangeStartNode related Node--------------',rangeStartNode.previousSibling,rangeStartNode.nextSibling);//,rangeStartNode,
     var paragraph = rangeStartNode.textContent;
 
-    // console.log('paragraph--------------', paragraph);
+    alert('paragraph--------------', paragraph);
     // console.log('caretPos--------------',caretPos,paragraph.substring(caretPos));
     if (paragraph.substring(caretPos,caretPos+1).match(nonEnglishCharacterPtn)){//非英语单词
         console.log('非英语单词--------------', '非英语单词');
