@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         New Userscript
+// @name         取词
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
@@ -11,6 +11,7 @@
 (function() {
     'use strict';
 
+  try {
     
 var englishWordPtn = new RegExp("[a-z-']+",'i');//i  Case-insensitive search.
 var wordFirstPartPtn = new RegExp("[a-z-']+$",'i')
@@ -98,4 +99,9 @@ function textAtPosition(event) {
 
 
 }
+    
+ } catch (e) { //主要是为了防止taskBotton没有disabled的情况导致程序不运行；有时候还是会没有.disabled，因为是null object，
+               alert(e);
+            }   
+    
 })();
