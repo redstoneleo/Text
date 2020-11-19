@@ -1,12 +1,17 @@
 // ==UserScript==
-// @name        New script 
-// @namespace   Violentmonkey Scripts
-// @match       *://*/*
-// @grant       none
-// @version     1.0
-// @author      -
-// @description 2020/11/19 上午2:12:40
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        *://*/*
+// @grant        none
 // ==/UserScript==
+
+(function() {
+    'use strict';
+
+    
 var englishWordPtn = new RegExp("[a-z-']+",'i');//i  Case-insensitive search.
 var wordFirstPartPtn = new RegExp("[a-z-']+$",'i')
 var nonEnglishCharacterPtn = new RegExp("[^a-z-']",'i');//i  Case-insensitive search.
@@ -92,3 +97,4 @@ function textAtPosition(event) {
 
 
 }
+})();
